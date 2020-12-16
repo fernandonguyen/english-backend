@@ -1,2 +1,2 @@
 # english-backend
-[![Build Status](https://travis-ci.com/sukantaworkspace/spring-api-cicd.svg?branch=master)](https://travis-ci.com/sukantaworkspace/spring-api-cicd)
+[![Build Status](https://travis-ci.com/fernandonguyen/english-backend.svg?branch=main)](https://travis-ci.com/github/fernandonguyen/english-backend)
