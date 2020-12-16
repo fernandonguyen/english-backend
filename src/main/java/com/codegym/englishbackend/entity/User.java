@@ -43,13 +43,4 @@ public class User extends AuditModel {
     )
     @Builder.Default
     private List<Vocabulary> books = new ArrayList<>();
-
-    @ManyToMany
-    @JoinTable(
-            name = "users_roles",
-            joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "id"))
-    private Collection<Role> roles;
 }
