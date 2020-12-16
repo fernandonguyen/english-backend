@@ -2,8 +2,8 @@ package com.codegym.englishbackend.controllers;
 
 
 import com.codegym.englishbackend.exception.ResourceNotFoundException;
-import com.codegym.englishbackend.model.User;
-import com.codegym.englishbackend.model.Vocabulary;
+import com.codegym.englishbackend.entity.User;
+import com.codegym.englishbackend.entity.Vocabulary;
 import com.codegym.englishbackend.repositories.UserRepository;
 import com.codegym.englishbackend.repositories.VocabularyRepository;
 import lombok.RequiredArgsConstructor;

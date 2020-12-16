@@ -1,7 +1,7 @@
 package com.codegym.englishbackend.controllers;
 
 import com.codegym.englishbackend.exception.ResourceNotFoundException;
-import com.codegym.englishbackend.model.User;
+import com.codegym.englishbackend.entity.User;
 import com.codegym.englishbackend.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.*;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Pageable;
 
 import javax.validation.Valid;
-import java.util.Date;
 import java.util.Optional;
 
 import static com.codegym.englishbackend.controllers.ResponseUtil.resourceUri;

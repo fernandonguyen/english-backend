@@ -1,6 +1,6 @@
 package com.codegym.englishbackend.repositories;
 
-import com.codegym.englishbackend.model.Vocabulary;
+import com.codegym.englishbackend.entity.Vocabulary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 

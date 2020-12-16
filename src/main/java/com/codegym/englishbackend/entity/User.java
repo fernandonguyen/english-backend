@@ -1,14 +1,13 @@
-package com.codegym.englishbackend.model;
+package com.codegym.englishbackend.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @NoArgsConstructor
@@ -44,4 +43,13 @@ public class User extends AuditModel {
     )
     @Builder.Default
     private List<Vocabulary> books = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+    private Collection<Role> roles;
 }
