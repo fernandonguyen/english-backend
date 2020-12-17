@@ -6,6 +6,6 @@ dist: trusty
 jdk: oraclejdk11
 before_install:
   - chmod +x mvnw
-  - sudo mysql -e 'CREATE DATABASE my_english;'
+  - sudo mysql -e 'CREATE DATABASE IF NOT EXISTS my_english;'
   - sudo mysql -e 'USE my_english; select database();'
   - sudo mysql --version
