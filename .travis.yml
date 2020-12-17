@@ -1,6 +1,13 @@
 language: java
 sudo: true
+services:
+    - mysql
 dist: trusty
 jdk: oraclejdk11
 before_install:
   - chmod +x mvnw
+  - sudo mysql -e 'CREATE DATABASE my_english;'
+  - sudo mysql -e 'select database();'
+  - sudo mysql -e 'SHOW DATABASES;'
+  - sudo mysql -e 'USE my_english; select database();'
+  - sudo mysql --version
