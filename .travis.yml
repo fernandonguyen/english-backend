@@ -7,5 +7,5 @@ jdk: oraclejdk11
 before_install:
   - chmod +x mvnw
   - sudo mysql -e 'CREATE DATABASE my_english;'
-  - sudo mysql -e "use my_english; update user set authentication_string=PASSWORD('kienkun1990') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+  - sudo mysql -e 'USE my_english; select database();'
   - sudo mysql --version
