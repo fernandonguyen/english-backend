@@ -41,6 +41,9 @@ public class JwtInMemoryUserDetailsService implements UserDetailsService {
 //        return findFirst.get();
         Optional<User> user = userRepository.findByUserName(username);
         Optional<JwtUserDetails> findFirst = Optional.of(new JwtUserDetails(user.get().getId(), username, passwordEncoder.encode(user.get().getPassWord()), "ROLE_USER_2"));
+        if (!findFirst.isPresent()) {
+            throw new UsernameNotFoundException(String.format("USER_NOT_FOUND '%s'.", username));
+        }
         return findFirst.get();
     }
 }
