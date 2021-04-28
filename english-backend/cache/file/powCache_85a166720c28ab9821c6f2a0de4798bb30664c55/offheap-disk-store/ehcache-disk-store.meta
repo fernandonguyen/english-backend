@@ -1,0 +1,4 @@
+#Key and value types
+#Wed Apr 28 11:41:26 ICT 2021
+keyType=java.util.ArrayList
+valueType=java.lang.Double

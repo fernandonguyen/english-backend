@@ -1,0 +1,4 @@
+#Key and value types
+#Wed Apr 28 11:41:25 ICT 2021
+keyType=java.lang.Long
+valueType=com.codegym.englishbackend.DTO.Student
